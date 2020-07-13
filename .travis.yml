@@ -1,17 +1,16 @@
-matrix:
-    os: linux
-    dist: focal
-    arch: arm64-graviton2
-    group: dev
-    
-    include:
-        - language: ruby
-          rvm:
-            - 2.5
-          script:
-            - ruby hello.rb
-        
-        - language: cpp
-          compiler: clang
-          script:
-            - g++ hello.cpp          
+os: linux
+dist: focal
+arch: arm64-graviton2
+group: dev
+jobs:
+  include:
+    - language: ruby
+      rvm:
+        - 2.5
+      script:
+        - ruby hello.rb
+    - language: cpp
+      compiler: clang
+      script:
+        - g++ hello.cpp
+
