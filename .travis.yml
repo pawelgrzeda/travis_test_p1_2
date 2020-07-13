@@ -10,7 +10,7 @@ jobs:
       script:
         - ruby hello.rb
     - language: cpp
-      compiler: gcc
+      compiler: clang
       script:
-        - g++ hello.cpp
+        - clang++ hello.cpp
 
