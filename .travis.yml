@@ -10,7 +10,14 @@ jobs:
       script:
         - ruby hello.rb
     - language: cpp
+      compiler: gcc
+      script:
+        - g++ hello.cpp -o travis_gcc_cpp98
+        - ./travis_gcc_cpp98
+        
+    - language: cpp
       compiler: clang
       script:
-        - clang++ hello.cpp
+        - clang++ hello.cpp -o travis_gcc_cpp98
+        - ./travis_gcc_cpp98
 
